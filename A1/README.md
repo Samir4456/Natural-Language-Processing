@@ -23,13 +23,6 @@ http://127.0.0.1:5000
 
 
 ---
-
----
-
-### ✅ Notes (important)
-- `demo.png` must be in the **root directory**
-- File name must match **exactly** (`demo.png`)
-- GitHub will automatically render the image as shown
-
-This README is **concise, clean, and ideal for grading**.
+# Demo
+![](https://github.com/Samir4456/Natural-Language-Processing-/blob/main/A1/demo.png)
 
