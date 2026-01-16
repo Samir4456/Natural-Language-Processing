@@ -24,9 +24,4 @@ http://127.0.0.1:5000
 
 ---
 
-This will:
-- render perfectly on GitHub
-- show the screenshot
-- stay concise and clean (ideal for grading)
-
-If you want, I can make it **even shorter (3–4 lines total)** or adapt it to your professor’s exact wording.
+![demo](demo.png)
