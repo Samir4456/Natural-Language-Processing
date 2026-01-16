@@ -1,0 +1,4 @@
+Model,Window Size,Training Loss,Training time,Syntactic Accuracy,Semantic accuracy,Spearman,MSE
+Word2Vec Skip-gram (full softmax),2,4.645,8.65,,,,
+Word2Vec Skip-gram NEG,2,0.7966,70.81,,,,
+GloVe,2,0.0455,0.92,0.0,0.0,0.189,35.915

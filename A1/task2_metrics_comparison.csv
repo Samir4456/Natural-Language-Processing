@@ -1,0 +1,4 @@
+model,window,dynamic_window,embedding_dim,batch_size,steps,epochs,num_negatives,cooc_build_time_sec,training_time_sec,final_loss,num_cooc_pairs,num_train_pairs,total_time_sec
+Word2Vec Skip-gram (full softmax),2,True,100,2048,3000.0,,,,8.65,4.645,,,8.65
+Word2Vec Skip-gram NEG,2,True,100,4096,8000.0,,10.0,,70.81,0.7966,,,70.81
+GloVe,2,True,100,4096,,5.0,,0.32,0.92,0.0455,86927.0,86927.0,1.24
