@@ -5,23 +5,20 @@ The assignment covers data preprocessing, model training, evaluation using loss 
 
 ---
 
-## 📁 Folder Structure
+## 📚 Dataset Used (Project Gutenberg)
 
-A2/
-├── a2.ipynb # Main notebook (data preparation, training, evaluation)
-├── Loss_Curve.png # Training & validation loss curve
-├── Perplexity.png # Training & validation perplexity curve
-├── code/
-│ ├── app.py # Flask app for text generation
-│ ├── saved_lstm_lm/
-│ │ ├── model.pt # Trained LSTM model
-│ │ └── vocab.pt # Vocabulary mappings
-│ └── templates/ # HTML templates for Flask app
-├── Model/ # Model-related utilities / experiments
-└── README.md # Project documentation
+The model is trained using the following public-domain books from **Project Gutenberg**:
 
+- **Book ID #11** – *Alice’s Adventures in Wonderland*
+- **Book ID #1342** – *Pride and Prejudice*
+- **Book ID #84** – *Frankenstein*
+- **Book ID #1661** – *The Adventures of Sherlock Holmes*
+
+All texts were cleaned, tokenized, and combined into a single training corpus.
 
 ---
+
+
 
 ## 📊 Training Results
 
@@ -39,18 +36,7 @@ Lower perplexity indicates better language modeling performance.
 
 ---
 
-## 📚 Dataset Used (Project Gutenberg)
 
-The model is trained using the following public-domain books from **Project Gutenberg**:
-
-- **Book ID #11** – *Alice’s Adventures in Wonderland*
-- **Book ID #1342** – *Pride and Prejudice*
-- **Book ID #84** – *Frankenstein*
-- **Book ID #1661** – *The Adventures of Sherlock Holmes*
-
-All texts were cleaned, tokenized, and combined into a single training corpus.
-
----
 
 ## 🚀 How to Run the Project
 
@@ -71,5 +57,9 @@ python app.py
 Then open your browser and visit:
 
 http://127.0.0.1:5000
+```
+--- 
 
-# Demo
+## Demo
+
+
