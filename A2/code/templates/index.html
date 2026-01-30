@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LSTM Language Model</title>
+  <style>
+    body { font-family: Arial; max-width: 900px; margin: 30px; }
+    textarea { width: 100%; height: 120px; }
+    .row { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+    .box { display: flex; flex-direction: column; min-width: 180px; }
+    input { padding: 6px; }
+    button { padding: 10px 16px; margin-top: 12px; }
+    pre { background: #f4f4f4; padding: 12px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>LSTM Gutenberg Text Generator</h2>
+
+  <form method="POST">
+    <label>Prompt</label>
+    <textarea name="prompt">{{ prompt }}</textarea>
+
+    <div class="row">
+      <div class="box">
+        <label>Max tokens</label>
+        <input type="number" name="max_new_tokens" value="{{ max_new_tokens }}">
+      </div>
+      <div class="box">
+        <label>Temperature</label>
+        <input type="number" step="0.05" name="temperature" value="{{ temperature }}">
+      </div>
+      <div class="box">
+        <label>Top-k</label>
+        <input type="number" name="top_k" value="{{ top_k }}">
+      </div>
+      <div class="box">
+        <label>Top-p</label>
+        <input type="number" step="0.05" name="top_p" value="{{ top_p }}">
+      </div>
+    </div>
+
+    <button type="submit">Generate</button>
+  </form>
+
+  {% if output %}
+    <h3>Generated Text</h3>
+    <pre>{{ output }}</pre>
+  {% endif %}
+</body>
+</html>
