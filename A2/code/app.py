@@ -1,12 +1,12 @@
 
 import re
+import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from flask import Flask, render_template, request
-import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 VOCAB_PATH = os.path.join(BASE_DIR, "saved_lstm_lm", "vocab.pt")
 MODEL_PATH = os.path.join(BASE_DIR, "saved_lstm_lm", "model.pt")
 
@@ -42,7 +42,7 @@ def sample_next_token(probs, top_k=50, top_p=0.9):
 
     if top_k is not None and top_k > 0:
         k = min(top_k, probs.numel())
-        v, ix = torch.topk(probs, k)
+        _, ix = torch.topk(probs, k)
         mask = torch.zeros_like(probs)
         mask[ix] = probs[ix]
         probs = mask / (mask.sum() + 1e-12)
@@ -85,7 +85,6 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 vocab = torch.load(VOCAB_PATH, map_location="cpu")
 itos = vocab["itos"]
 stoi = vocab["stoi"]
-
 vocab_size = len(itos)
 
 embed_dim = 256
