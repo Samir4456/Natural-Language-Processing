@@ -118,9 +118,9 @@ The training process includes **visualization of training and validation loss ac
 
 ```
 Input:  Pixels above lines set
-Output: (Generated Nepali translation)
-```
 
+```
+![Image](https://github.com/user-attachments/assets/618820ac-206d-4a71-b53f-8ca00df7fab3)
 ---
 
 ##  Web Application
