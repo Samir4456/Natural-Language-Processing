@@ -8,4 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
-A3\models
+
+# ignore models
+A3/models/
+*.pt
+
