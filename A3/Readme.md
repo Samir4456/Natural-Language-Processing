@@ -1,16 +1,12 @@
 # A3 – English → Nepali Neural Machine Translation with Attention
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg)
-![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg)
-![License](https://img.shields.io/badge/License-Academic-lightgrey.svg)
 
 This project implements a **Neural Machine Translation (NMT)** system that translates **English → Nepali** using a **Seq2Seq architecture with attention mechanisms**.
 The workflow covers **dataset preparation, tokenization, model training, evaluation, comparison of attention types, inference, and web deployment**.
 
 ---
 
-## 📌 Features
+##  Features
 
 * English → Nepali translation using **attention-based Seq2Seq**
 * Comparison of **General vs Additive Attention**
@@ -21,7 +17,7 @@ The workflow covers **dataset preparation, tokenization, model training, evaluat
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 **Dataset:** `Helsinki-NLP/opus-100 (en-ne)`
 **Source:** Hugging Face Datasets
@@ -34,7 +30,7 @@ Why this dataset:
 
 ---
 
-## 🔤 Tokenizer
+##  Tokenizer
 
 **Model:** `facebook/nllb-200-distilled-600M`
 **Tokenizer:** `NllbTokenizerFast`
@@ -51,7 +47,7 @@ Provides:
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 ### Encoder
 
@@ -70,7 +66,7 @@ Provides:
 
 ---
 
-## ⚙️ Training Setup
+##  Training Setup
 
 | Parameter     | Value         |
 | ------------- | ------------- |
@@ -87,7 +83,7 @@ Metrics tracked:
 
 ---
 
-## 📈 Results
+##  Results
 
 | Attention          | Training Loss | Training PPL | Validation Loss | Validation PPL |
 | ------------------ | ------------- | ------------ | --------------- | -------------- |
@@ -104,27 +100,19 @@ Additive Attention achieves **lower loss and perplexity**, indicating **better a
 The training process includes **visualization of training and validation loss across epochs** to monitor convergence and detect overfitting.
 
 
-Example plot file:
 
-```
+
 ![Loss Curve](loss_general.png)
 
-```
-```
 ![Loss Curve](loss_additive.png)
 
-```
-```
+
 ![Loss Curve](ppl_general.png)
 
-```
-```
+
 ![Loss Curve](ppl_additive.png)
 
-```
 
-
----
 
 ##  Inference Example
 
