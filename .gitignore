@@ -61,3 +61,16 @@ tokenizer/
 # ==============================
 .DS_Store
 Thumbs.db
+
+# Big outputs
+A4/artifacts/
+A4/models/
+A4/tokenizer/
+
+# Big text/data
+*.txt
+*.csv
+*.parquet
+*.pt
+*.pth
+*.bin
