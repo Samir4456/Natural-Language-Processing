@@ -13,3 +13,51 @@ wheels/
 A3/models/
 *.pt
 
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# ==============================
+# Jupyter
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# Large ML files (IMPORTANT)
+# ==============================
+A4/models/
+A4/artifacts/
+A4/tokenizer/
+
+# If models may appear anywhere
+models/
+artifacts/
+tokenizer/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.onnx
+
+# ==============================
+# Logs / temp
+# ==============================
+*.log
+*.tmp
+*.cache
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
