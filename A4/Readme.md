@@ -13,13 +13,6 @@ This project implements an **end-to-end semantic understanding pipeline**:
 3. **Evaluate performance** using classification metrics on the SNLI dataset.
 4. **Deploy a web application** that predicts semantic relationships between two sentences.
 
-This repository satisfies all required deliverables:
-
-* Jupyter notebook implementation
-* Experimental analysis and loss curves
-* Trained model checkpoints
-* Web application (`app/`)
-* Documentation (this README)
 
 ---
 
@@ -44,13 +37,13 @@ NLI Prediction Web App
 ```
 A4/
 │
-├── notebook.ipynb              # Full step-by-step implementation
+├── a4.ipynb              
 │
 ├── artifacts/
-│   └── corpus_100k.txt         # Wikipedia subset used for MLM
+│   └── corpus_100k.txt        
 │
 ├── tokenizer/
-│   └── vocab.txt               # WordPiece tokenizer trained from corpus
+│   └── vocab.txt              
 │
 ├── models/
 │   ├── bert_scratch_mlm.pt
@@ -83,12 +76,7 @@ A4/
 * **Masked Language Modeling (15% masking rule)**
 * Optimizer: **AdamW + linear warmup + decay**
 
-### Output
 
-* Trained **BERT encoder weights**
-* Saved for downstream SBERT training.
-
----
 
 ## Task 2 — Sentence-BERT for NLI
 
@@ -116,7 +104,45 @@ A4/
 
 ---
 
+##  Training Curves
+
+### Masked Language Model (MLM)
+
+**Training Loss**
+![MLM Training Loss](mlm_training_loss.png)
+
+**Masked Token Accuracy**
+![Masked Token Accuracy](masked_token_accuracy.png)
+
+---
+
+### SBERT NLI Model
+
+**Training Loss**
+![SBERT NLI Loss](sbert_nli_loss.png)
+
+**Validation Accuracy**
+![SBERT NLI Accuracy](sbert_nli_accuracy.png)
+
+
+
 ## Task 3 — Evaluation & Analysis
+
+### Confusion Matrix
+
+![Confusion Matrix](confusion_matrix.png)
+
+
+### Classification Report
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Entailment | 0.7318 | 0.7978 | 0.7634 | 3368 |
+| Neutral | 0.7003 | 0.6511 | 0.6748 | 3219 |
+| Contradiction | 0.7509 | 0.7328 | 0.7417 | 3237 |
+| **Accuracy** |  |  | **0.7283** | 9824 |
+| **Macro Avg** | 0.7276 | 0.7272 | 0.7266 | 9824 |
+| **Weighted Avg** | 0.7277 | 0.7283 | 0.7272 | 9824 |
 
 ### Metrics
 
@@ -170,50 +196,12 @@ http://127.0.0.1:5000
 
 ---
 
-##  Training Curves
 
-The notebook includes:
 
-* **MLM loss vs epoch**
-* **SBERT train/validation loss**
-* **SBERT train/validation accuracy**
+##  Demo
 
-These plots demonstrate:
 
-* Stable convergence from warmup scheduling
-* Improved semantic classification after fine-tuning
 
 ---
-
-##  Key Learning Outcomes
-
-This assignment demonstrates:
-
-* Transformer encoder implementation **from scratch**
-* Masked language modeling mechanics
-* Sentence embedding via **Siamese networks**
-* Natural Language Inference classification
-* End-to-end **ML → evaluation → deployment** pipeline
-
----
-
-##  References
-
-* BERT: *Bidirectional Encoder Representations from Transformers*
-* Sentence-BERT: *Sentence Embeddings using Siamese BERT-Networks*
-* Wikipedia dataset
-* SNLI dataset
-
-(All datasets are publicly available and cited in the notebook.)
-
----
-
-##  Author
-
-**Samir Pokharel**
-Artificial Intelligence / Natural Language Processing Coursework
-
----
-
 
 **End of README**
