@@ -74,3 +74,20 @@ A4/tokenizer/
 *.pt
 *.pth
 *.bin
+
+# Python venv
+Lib/
+Scripts/
+share/
+pyvenv.cfg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML / HuggingFace outputs
+checkpoint-*/
+*/checkpoint-*/
+dpo_output/
+*.bin
+*.pt
+*.safetensors
