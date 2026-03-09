@@ -143,6 +143,63 @@ The following components are pushed:
 * Model configuration
 
 ---
+# Task 4 — LLM-as-a-Judge Evaluation
+
+In this task, the outputs of two models were compared using an **LLM-as-a-Judge** evaluation method.
+
+* **Model A:** Base Model (Original pretrained model)
+* **Model B:** DPO Model (Fine-tuned using Direct Preference Optimization)
+
+The judge model evaluated responses from both models and selected the better answer for each instruction.
+
+---
+
+## Final Results
+
+```
+============================================================
+TASK 4 FINAL RESULTS
+============================================================
+Model B wins : 4
+Ties         : 4
+Total        : 15
+Win Rate     : 40.00%
+============================================================
+```
+
+---
+
+## Detailed Evaluation Results
+
+| Sample ID | Instruction                                                             | Winner  |
+| --------- | ----------------------------------------------------------------------- | ------- |
+| 1         | What are some good browser alternatives to Chrome?                      | Tie     |
+| 2         | Hi, my sister and her girlfriends want me to plan something fun.        | Model A |
+| 3         | Hi, I have some falafel, but no tahini to put on it.                    | Model A |
+| 4         | Can you tell me how to make chocolate chip cookies?                     | Model A |
+| 5         | How can I make bubble solution?                                         | Model B |
+| 6         | How is oil turned into gasoline?                                        | Model B |
+| 7         | How do I wrap a present neatly?                                         | Model B |
+| 8         | What is some cool music from the 1920s?                                 | Model B |
+| 9         | Hi, I'd like to play ice hockey. Can you explain the basics?            | Model A |
+| 10        | Is the US border open to Canada?                                        | Model A |
+| 11        | What are the names of some famous actors that started on stage?         | Tie     |
+| 12        | Hi, I've decided to keep a rat as a pet. How do I care for it?          | Model A |
+| 13        | I have my grandfather's antique fountain pen. How should I maintain it? | Tie     |
+| 14        | What breed dog is the smallest?                                         | Model A |
+| 15        | What is Kevlar made out of?                                             | Tie     |
+
+---
+
+## Summary
+
+* **Model A (Base Model) Wins:** 7
+* **Model B (DPO Model) Wins:** 4
+* **Ties:** 4
+* **Total Evaluations:** 15
+* **Model B Win Rate:** **40%**
+
+This evaluation compares the **base model** with the **DPO fine-tuned model**, demonstrating how preference optimization affects response quality.
 
 # Project Structure
 
