@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What is the main issue with early work with GPT regarding instruction following?",
+    "ground_truth_answer": "LLMs ignore the intent of the request and rely on their natural inclination to generate continuations.",
+    "naive_rag_answer": "The main issue with early work with GPT regarding instruction following was that the models did not sufficiently learn to follow specific instructions provided to them. Early attempts showed that while the models could generate coherent text based on general patterns in pretraining data, they often ignored or misunderstood the specific requests made, instead producing unrelated or irrelevant content.",
+    "contextual_retrieval_answer": "The main issue with early work with GPT regarding instruction following was that the models did not sufficiently understand or follow the given instructions, often producing outputs that were unrelated to the intended task. Examples provided showed GPT generating text that was similar to the input rather than responding appropriately to specific instructions."
+  },
+  {
+    "question": "What is the goal of instruction tuning in language models?",
+    "ground_truth_answer": "To make LLMs better at following instructions.",
+    "naive_rag_answer": "The goal of instruction tuning in language models is to make them better at following specific instructions by fine-tuning them on a corpus of instructions and responses, thereby enhancing their ability to perform tasks aligned with human needs and expectations.",
+    "contextual_retrieval_answer": "The goal of instruction tuning in language models is to improve their ability to follow specific instructions for a range of tasks, enhancing their performance beyond the general language modeling objectives achieved during pretraining. This is done by training the model on a corpus of instructions and their corresponding responses, treating these instructions as supervised data to refine the model's understanding and adherence to given tasks."
+  },
+  {
+    "question": "What is the difference between instruction tuning and parameter-efficient finetuning?",
+    "ground_truth_answer": "Instruction tuning involves ﬁne-tuning on a corpus of instructions and responses, while parameter-efficient finetuning creates new small parameters to adapt to a new domain.",
+    "naive_rag_answer": "Instruction tuning differs from other kinds of fine-tuning by focusing specifically on adapting a pretrained model to follow instructions for specific tasks. Unlike parameter-efficient fine-tuning which creates new small parameters, instruction tuning uses existing parameters and adapts them to understand and respond to given instructions, treating each instruction as a supervised learning task.",
+    "contextual_retrieval_answer": "Instruction tuning involves training a language model on a dataset of instructions and their corresponding responses using the same language modeling objective, focusing on improving its ability to follow specific instructions. In contrast, parameter-efficient finetuning, such as LoRA, creates new small parameters to adapt to a new domain or task, often freezing the pretrained model's parameters."
+  },
+  {
+    "question": "What is the role of the preference alignment model in preference alignment?",
+    "ground_truth_answer": "It decides how much a candidate response aligns with human preferences.",
+    "naive_rag_answer": "The preference alignment model's role is to train a separate model that evaluates how well candidate responses align with human preferences. This model is then used to fine-tune the base model, ensuring it generates outputs that humans find more desirable.",
+    "contextual_retrieval_answer": "The preference alignment model trains a separate model to assess how well candidate responses align with human preferences. This model's output is then used to fine-tune the base model, thereby helping the model to generate outputs that better match human preferences."
+  },
+  {
+    "question": "What is the goal of instruction tuning?",
+    "ground_truth_answer": "To learn to follow instructions in general.",
+    "naive_rag_answer": "The goal of instruction tuning is to make a language model better at following specific instructions by fine-tuning it on a corpus of instructions and corresponding responses, thereby enhancing its ability to perform tasks aligned with human needs for helpful and non-harmful behavior.",
+    "contextual_retrieval_answer": "The goal of instruction tuning is to make a large language model better at following specific instructions by training it on a dataset of instructions and their corresponding responses, thereby improving its ability to perform tasks aligned with those instructions through supervised learning."
+  },
+  {
+    "question": "What is one method used to generate instruction-tuning datasets?",
+    "ground_truth_answer": "Using language models to help at each stage.",
+    "naive_rag_answer": "One method used to generate instruction-tuning datasets is converting existing supervised training data into instruction prompts and input/output demonstration pairs via simple templates. This involves extracting fields and ground-truth labels from the training data, encoding them as key/value pairs, and inserting them into templates to produce instantiated instructions.",
+    "contextual_retrieval_answer": "One method used to generate instruction-tuning datasets is by having people write the instances directly. For instance, part of the Aya instruction fine-tuning corpus includes 204,000 instruction/response instances written by 3,000 fluent speakers of 65 languages as part of a participatory research initiative."
+  },
+  {
+    "question": "What is the purpose of partitioning large instruction-tuning datasets into clusters?",
+    "ground_truth_answer": "To allow the use of a uniform task metric for the held-out evaluation.",
+    "naive_rag_answer": "Partitioning large instruction-tuning datasets into clusters aims to organize the diverse tasks and languages within the dataset, making it easier to apply instruction tuning effectively. By clustering, researchers can focus on specific subsets of tasks, potentially improving efficiency and effectiveness in fine-tuning the language model.",
+    "contextual_retrieval_answer": "Partitioning large instruction-tuning datasets into clusters aims to improve efficiency and effectiveness during the training process. By clustering similar instructions together, the model can learn more effectively from patterns within the data, potentially reducing the overall training time and computational resources needed."
+  },
+  {
+    "question": "What are the aspects used for rating system outputs?",
+    "ground_truth_answer": "Models of helpfulness, honesty, correctness, complexity, and verbosity.",
+    "naive_rag_answer": "The aspects used for rating system outputs include helpfulness, honesty, correctness, complexity, and verbosity. These aspects are rated on a Likert scale (0-4) by annotators who evaluate outputs independently, avoiding the need for extensive pairwise comparisons.",
+    "contextual_retrieval_answer": "The aspects used for rating system outputs include helpfulness, honesty, correctness, complexity, and verbosity. These aspects are rated on a Likert scale by annotators who evaluate system outputs independently."
+  },
+  {
+    "question": "How is the Bradley-Terry Model's logit calculated?",
+    "ground_truth_answer": "Log of the odds of the possible outcomes.",
+    "naive_rag_answer": "The logit in the Bradley-Terry Model is expressed as β log πθ(o|x) / πref(o|x), where πθ(o|x) is the probability of option o being preferred over option j according to the trained policy πθ, and πref(o|x) is the probability according to the reference policy πref. This logit is used in the reinforcement learning framework to calculate the likelihood of a preference pair.",
+    "contextual_retrieval_answer": "The logit in the Bradley-Terry Model is calculated as \\( \\delta = r(x, oi) - r(x, oj) \\), where \\( r(x, oi) \\) and \\( r(x, oj) \\) are the rewards assigned to the preferred and losing options respectively, and \\( oi \\succ oj \\) indicates the preference of \\( oi \\) over \\( oj \\) for a given prompt \\( x \\). The probability of \\( oi \\) being preferred over \\( oj \\) is then given by \\( P(oi \\succ oj|x) = \\sigma(\\delta) \\), where \\( \\sigma \\) is the logistic sigmoid function."
+  },
+  {
+    "question": "What is the formula for the Bradley-Terry Model's probability of preference?",
+    "ground_truth_answer": "P(oi ≻oj|x) = σ(zi −zj)",
+    "naive_rag_answer": "The formula for the Bradley-Terry Model's probability of preference is given by \\( P(oi \\succsim oj | x) = \\sigma(\\beta \\log \\frac{\\pi_\\theta(oi|x)}{\\pi_\\theta(oj|x)} - \\beta \\log \\frac{\\pi_\\theta(oj|x)}{\\pi_\\theta(oi|x)}) \\), where \\(\\sigma\\) is the logistic sigmoid function, \\(\\beta\\) is a hyperparameter, and \\(\\pi_\\theta\\) represents the policy parameters learned from the preference data.",
+    "contextual_retrieval_answer": "The formula for the Bradley-Terry Model's probability of preference in the context provided is \\( P(oi \\succsim oj | x) = \\sigma(\\delta) \\), where \\( \\sigma \\) is the logistic sigmoid function and \\( \\delta = r(x, oi) - r(x, oj) \\). Here, \\( r(x, oi) \\) and \\( r(x, oj) \\) represent the scores assigned to the options \\( oi \\) and \\( oj \\) respectively by the reward model."
+  },
+  {
+    "question": "What is the Kullback-Leibler (KL) divergence?",
+    "ground_truth_answer": "It measures the distance between two probability distributions.",
+    "naive_rag_answer": "The Kullback-Leibler (KL) divergence is measured as the log of the ratio of the trained policy to the original reference policy in the context of optimizing LLMs based on preference data. It acts as a penalty term to prevent the model from deviating too much from the original reference policy.",
+    "contextual_retrieval_answer": "The Kullback-Leibler (KL) divergence is a measure of the difference between two probability distributions, used here to adjust a language model's behavior to better align with human preferences for helpfulness and non-harmfulness. It quantifies how much one distribution diverges from another, with a hyperparameter β that influences its impact."
+  },
+  {
+    "question": "What is β in the context of LLMs?",
+    "ground_truth_answer": "It is a hyperparameter that modulates the impact of the penalty term.",
+    "naive_rag_answer": "In the context provided, β is a hyperparameter that controls the penalty term in the Direct Preference Optimization (DPO) method. Its value typically ranges from 0.1 to 0.01, and it modulates the impact of the KL divergence penalty in the optimization process.",
+    "contextual_retrieval_answer": "In the context of LLMs, β is a hyperparameter that modulates the impact of the Kullback-Leibler (KL) divergence term in preference-based learning, specifically in Direct Preference Optimization (DPO). It controls the balance between aligning the model's output with human preferences and maintaining alignment with a reference model."
+  },
+  {
+    "question": "What is the key insight of Direct Preference Optimization (DPO)?",
+    "ground_truth_answer": "Rewriting the closed-form solution to express the reward function in terms of the optimal policy and the reference policy.",
+    "naive_rag_answer": "The key insight of Direct Preference Optimization (DPO) is that it directly optimizes the likelihood of a preferred option pair based on the policies of the fine-tuned language model (LLM) without needing an explicit reward model, thereby improving the LLM's performance by aligning it with user preferences.",
+    "contextual_retrieval_answer": "The key insight of Direct Preference Optimization (DPO) is to rewrite the closed-form solution to express the reward function \\( r(x,o) \\) in terms of the optimal policy \\( \\pi^* \\) and the reference policy \\( \\pi_{\\text{ref}} \\). This allows DPO to optimize candidate LLMs directly from existing preference data without needing to learn an explicit reward model."
+  },
+  {
+    "question": "What is the CE loss in the context of DPO?",
+    "ground_truth_answer": "-logσ(β log πθ(ow|x) πref(ow|x) -β log πθ(ol|x) πref(ol|x)).",
+    "naive_rag_answer": "The CE loss (negative log likelihood) in the context of DPO is given by the expression:\n\n\\[ \\text{LDPO}(πθ) = -\\mathbb{E}_{(x,ow,ol) \\sim D} \\left[ \\log \\sigma \\left( \\beta \\log \\frac{\\pi_{θ}(ow|x)}{\\pi_{ref}(ow|x)} - \\beta \\log \\frac{\\pi_{θ}(ol|x)}{\\pi_{ref}(ol|x)} \\right) \\right] \\]\n\nThis loss function aims to increase the likelihood of the preferred option and decrease the likelihood of the dispreferred option while balancing this against not deviating too far from the reference policy.",
+    "contextual_retrieval_answer": "In the context of DPO, the CE (cross-entropy) loss is expressed as the negative log likelihood of the preference pair, given by the formula LDPO(x,ow,ol) = −logσ(β log πθ(ow|x) πref(ow|x) −β log πθ(ol|x) πref(ol|x)). This loss aims to increase the likelihood of preferred options and decrease the likelihood of dispreferred options, balancing this with the goal of not deviating too far from the reference policy πref through the use of a KL-penalty term controlled by the hyperparameter β."
+  },
+  {
+    "question": "Who contributed to the work on real toxicity prompts evaluation in 2020?",
+    "ground_truth_answer": "Gehman, S., S. Gururangan, M. Sap, Y. Choi, and N. A. Smith",
+    "naive_rag_answer": "Based on the context provided, Gehman et al. (2020) contributed to the work on evaluating real toxicity prompts in 2020 through their work \"RealToxicityPrompts: Evaluating neural toxic degeneration in language models.\"",
+    "contextual_retrieval_answer": "Based on the context provided, Gehman et al. (2020) contributed to the work on evaluating real toxicity prompts in 2020. They showed how completely non-toxic prompts could still lead large language models to produce hate speech and abusive content."
+  },
+  {
+    "question": "What is the title of the paper that introduced the concept of chain-of-thought prompting in 2022?",
+    "ground_truth_answer": "Chain-of-thought prompting elicits reasoning in large language models",
+    "naive_rag_answer": "The paper that introduced the concept of chain-of-thought prompting in 2022 is referenced in the context provided, but the specific title of the paper is not explicitly stated. The context mentions that numerous studies have found that augmenting demonstrations with reasoning steps improves language models' performance on difficult reasoning tasks, citing \"Wei et al., 2022\" as a reference. Therefore, based on the information given, the answer is that the paper is likely \"Wei et al., 2022,\" but the exact title is not provided in the context.",
+    "contextual_retrieval_answer": "The paper that introduced the concept of chain-of-thought prompting in 2022 is not explicitly named in the provided context. The context describes the concept but does not mention a specific paper title."
+  },
+  {
+    "question": "What are the two main problems addressed by additional training techniques for language models?",
+    "ground_truth_answer": "Two problems: insufficient helpfulness and potential harm.",
+    "naive_rag_answer": "The two main problems addressed by additional training techniques for language models, as discussed, are insufficient helpfulness and potential harm. The text mentions that LLMs are not sufficiently helpful, as they need more training to follow instructions effectively. Additionally, LLMs can be harmful due to their capacity to generate text that is dangerous, false, or toxic.",
+    "contextual_retrieval_answer": "The two main problems addressed by additional training techniques for language models, as discussed, are insufficient helpfulness and potential harm. Additional training helps the models to better follow instructions and also makes them safer by reducing the likelihood of generating harmful content."
+  },
+  {
+    "question": "What does instruction tuning involve?",
+    "ground_truth_answer": "Finetuning on a corpus of instructions and responses.",
+    "naive_rag_answer": "Instruction tuning involves taking a pretrained language model and training it on a corpus of instructions and their corresponding responses. This process adjusts the model to better follow specific tasks or instructions, enabling it to improve its general ability to follow instructions through supervised learning.",
+    "contextual_retrieval_answer": "Instruction tuning involves taking a pretrained language model and training it on a corpus of instructions and responses, thereby improving its ability to follow specific instructions through supervised learning. This process involves updating the model's parameters on the finetuning domain while maintaining the original pretrained model's parameters."
+  },
+  {
+    "question": "What is the purpose of preference-based learning?",
+    "ground_truth_answer": "to improve the performance of fine-tuned LLMs",
+    "naive_rag_answer": "The purpose of preference-based learning is to use human preference judgments to improve the performance of fine-tuned language models, particularly in enhancing their helpfulness, honesty, and safety, without requiring detailed knowledge of how the outputs were generated. This approach leverages preference data to guide the model towards generating more desirable outputs, even though the model's initial performance was already improved through instruction tuning.",
+    "contextual_retrieval_answer": "The purpose of preference-based learning is to improve the performance of fine-tuned Language Models (LLMs) by using preference judgments, which allow people to express opinions on various outputs without needing detailed knowledge of how the outputs were produced. This approach aims to enhance general performance and specific qualities like honesty, helpfulness, and harmlessness, addressing issues like hallucinations and unsafe outputs."
+  },
+  {
+    "question": "What are the aspects of system outputs that can be rated?",
+    "ground_truth_answer": "Helpfulness, honesty, correctness, complexity, and verbosity",
+    "naive_rag_answer": "The aspects of system outputs that can be rated include helpfulness, honesty, correctness, complexity, and verbosity. These aspects are rated on a Likert scale (0-4) by annotators who evaluate outputs independently, avoiding the need for extensive pairwise comparisons.",
+    "contextual_retrieval_answer": "The aspects of system outputs that can be rated include helpfulness, honesty, correctness, complexity, and verbosity. These aspects are evaluated on a Likert scale (0-4) by annotators who rate the outputs independently, allowing for a nuanced understanding of the quality of different outputs without needing to compare every pair of outputs directly."
+  }
+]

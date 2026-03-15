@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the main issue with early work with GPT regarding instruction following?",
+    "ground_truth_answer": "LLMs ignore the intent of the request and rely on their natural inclination to generate continuations."
+  },
+  {
+    "question": "What is the goal of instruction tuning in language models?",
+    "ground_truth_answer": "To make LLMs better at following instructions."
+  },
+  {
+    "question": "What is the difference between instruction tuning and parameter-efficient finetuning?",
+    "ground_truth_answer": "Instruction tuning involves ﬁne-tuning on a corpus of instructions and responses, while parameter-efficient finetuning creates new small parameters to adapt to a new domain."
+  },
+  {
+    "question": "What is the role of the preference alignment model in preference alignment?",
+    "ground_truth_answer": "It decides how much a candidate response aligns with human preferences."
+  },
+  {
+    "question": "What is the goal of instruction tuning?",
+    "ground_truth_answer": "To learn to follow instructions in general."
+  },
+  {
+    "question": "What is one method used to generate instruction-tuning datasets?",
+    "ground_truth_answer": "Using language models to help at each stage."
+  },
+  {
+    "question": "What is the purpose of partitioning large instruction-tuning datasets into clusters?",
+    "ground_truth_answer": "To allow the use of a uniform task metric for the held-out evaluation."
+  },
+  {
+    "question": "What are the aspects used for rating system outputs?",
+    "ground_truth_answer": "Models of helpfulness, honesty, correctness, complexity, and verbosity."
+  },
+  {
+    "question": "How is the Bradley-Terry Model's logit calculated?",
+    "ground_truth_answer": "Log of the odds of the possible outcomes."
+  },
+  {
+    "question": "What is the formula for the Bradley-Terry Model's probability of preference?",
+    "ground_truth_answer": "P(oi ≻oj|x) = σ(zi −zj)"
+  },
+  {
+    "question": "What is the Kullback-Leibler (KL) divergence?",
+    "ground_truth_answer": "It measures the distance between two probability distributions."
+  },
+  {
+    "question": "What is β in the context of LLMs?",
+    "ground_truth_answer": "It is a hyperparameter that modulates the impact of the penalty term."
+  },
+  {
+    "question": "What is the key insight of Direct Preference Optimization (DPO)?",
+    "ground_truth_answer": "Rewriting the closed-form solution to express the reward function in terms of the optimal policy and the reference policy."
+  },
+  {
+    "question": "What is the CE loss in the context of DPO?",
+    "ground_truth_answer": "-logσ(β log πθ(ow|x) πref(ow|x) -β log πθ(ol|x) πref(ol|x))."
+  },
+  {
+    "question": "Who contributed to the work on real toxicity prompts evaluation in 2020?",
+    "ground_truth_answer": "Gehman, S., S. Gururangan, M. Sap, Y. Choi, and N. A. Smith"
+  },
+  {
+    "question": "What is the title of the paper that introduced the concept of chain-of-thought prompting in 2022?",
+    "ground_truth_answer": "Chain-of-thought prompting elicits reasoning in large language models"
+  },
+  {
+    "question": "What are the two main problems addressed by additional training techniques for language models?",
+    "ground_truth_answer": "Two problems: insufficient helpfulness and potential harm."
+  },
+  {
+    "question": "What does instruction tuning involve?",
+    "ground_truth_answer": "Finetuning on a corpus of instructions and responses."
+  },
+  {
+    "question": "What is the purpose of preference-based learning?",
+    "ground_truth_answer": "to improve the performance of fine-tuned LLMs"
+  },
+  {
+    "question": "What are the aspects of system outputs that can be rated?",
+    "ground_truth_answer": "Helpfulness, honesty, correctness, complexity, and verbosity"
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "group_id": 0,
+    "paragraph_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "question": "What is the main issue with early work with GPT regarding instruction following?",
+    "answer": "LLMs ignore the intent of the request and rely on their natural inclination to generate continuations.",
+    "evidence_excerpt": "Here, the LLM ignores the intent of the request and relies instead on its natural inclination to autoregressively generate continuations consistent with its context.",
+    "qa_id": 1
+  },
+  {
+    "group_id": 0,
+    "paragraph_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "question": "What is the goal of instruction tuning in language models?",
+    "answer": "To make LLMs better at following instructions.",
+    "evidence_excerpt": "Instruction tuning (short for instruction ﬁnetuning, and sometimes even shortInstruction tuning ened to instruct tuning) is a method for making an LLM better at following instructions.",
+    "qa_id": 2
+  },
+  {
+    "group_id": 0,
+    "paragraph_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "question": "What is the difference between instruction tuning and parameter-efficient finetuning?",
+    "answer": "Instruction tuning involves ﬁne-tuning on a corpus of instructions and responses, while parameter-efficient finetuning creates new small parameters to adapt to a new domain.",
+    "evidence_excerpt": "In the ﬁrst example, introduced in Chapter 7 we can ﬁnetune as a way of adapting to a new domain by just continuing pretraining the LLM on data from a new domain. In this method all the parameters of the LLM are updated. In the second example, also from Chapter 7, parameter-efﬁcient ﬁnetuning, we adapt to a new domain by creating some new (small) parameters, and just adapting them to the new domain.",
+    "qa_id": 3
+  },
+  {
+    "group_id": 0,
+    "paragraph_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "question": "What is the role of the preference alignment model in preference alignment?",
+    "answer": "It decides how much a candidate response aligns with human preferences.",
+    "evidence_excerpt": "In the second technique, preference alignment, (sometimes called RLHF or DPO after two speciﬁc instantiations, Reinforcement Learning from Human Feedback and Direct Preference Optimization), a separate model is trained to decide how much a candidate response aligns with human preferences.",
+    "qa_id": 4
+  },
+  {
+    "group_id": 1,
+    "paragraph_ids": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "question": "What is the goal of instruction tuning?",
+    "answer": "To learn to follow instructions in general.",
+    "evidence_excerpt": "The goal of instruction tuning is not to learn a single task, but rather to learn to follow instructions in general.",
+    "qa_id": 5
+  },
+  {
+    "group_id": 1,
+    "paragraph_ids": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "question": "What is one method used to generate instruction-tuning datasets?",
+    "answer": "Using language models to help at each stage.",
+    "evidence_excerpt": "For example Bianchi et al. (2024) showed how to create instruction-tuning instances that can help a language model learn to give safer responses. They did this by selecting questions from datasets of harmful questions (e.g., How do I poison food? or How do I embez-",
+    "qa_id": 6
+  },
+  {
+    "group_id": 1,
+    "paragraph_ids": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "question": "What is the purpose of partitioning large instruction-tuning datasets into clusters?",
+    "answer": "To allow the use of a uniform task metric for the held-out evaluation.",
+    "evidence_excerpt": "To address this issue, large instruction-tuning datasets are partitioned into clusters based on task similarity. The leave-one-out training/test approach is then applied at the cluster level.",
+    "qa_id": 7
+  },
+  {
+    "group_id": 2,
+    "paragraph_ids": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "question": "What are the aspects used for rating system outputs?",
+    "answer": "Models of helpfulness, honesty, correctness, complexity, and verbosity.",
+    "evidence_excerpt": "In recent years, frequently used aspects have included models of helpfulness, honesty, correctness, complexity, and verbosity (Bai et al., 2022; Wang et al., 2024).",
+    "qa_id": 8
+  },
+  {
+    "group_id": 2,
+    "paragraph_ids": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "question": "How is the Bradley-Terry Model's logit calculated?",
+    "answer": "Log of the odds of the possible outcomes.",
+    "evidence_excerpt": "The difference in scores, δ = zi −zj, is taken to represent the log of the odds of the possible outcomes (the logit).",
+    "qa_id": 9
+  },
+  {
+    "group_id": 2,
+    "paragraph_ids": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "question": "What is the formula for the Bradley-Terry Model's probability of preference?",
+    "answer": "P(oi ≻oj|x) = σ(zi −zj)",
+    "evidence_excerpt": "P(oi ≻oj|x) = σ(zi −zj)",
+    "qa_id": 10
+  },
+  {
+    "group_id": 3,
+    "paragraph_ids": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "question": "What is the Kullback-Leibler (KL) divergence?",
+    "answer": "It measures the distance between two probability distributions.",
+    "evidence_excerpt": "DKL(πθ(o|x)||πref(o|x)) is the KullbackLeibler (KL) divergence.",
+    "qa_id": 11
+  },
+  {
+    "group_id": 3,
+    "paragraph_ids": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "question": "What is β in the context of LLMs?",
+    "answer": "It is a hyperparameter that modulates the impact of the penalty term.",
+    "evidence_excerpt": "The β term is a hyperparameter that modulates the impact of this penalty term.",
+    "qa_id": 12
+  },
+  {
+    "group_id": 3,
+    "paragraph_ids": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "question": "What is the key insight of Direct Preference Optimization (DPO)?",
+    "answer": "Rewriting the closed-form solution to express the reward function in terms of the optimal policy and the reference policy.",
+    "evidence_excerpt": "The key insight of DPO is to rewrite the closed-form solution to this maximization to express the reward function r(x,o) in terms of the optimal policy π∗and the reference policy πref.",
+    "qa_id": 13
+  },
+  {
+    "group_id": 3,
+    "paragraph_ids": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "question": "What is the CE loss in the context of DPO?",
+    "answer": "-logσ(β log πθ(ow|x) πref(ow|x) -β log πθ(ol|x) πref(ol|x)).",
+    "evidence_excerpt": "The CE loss (negative log likelihood) for a single instance is: LDPO(x,ow,ol) = −logσ(β log πθ(ow|x) πref(ow|x) -β log πθ(ol|x) πref(ol|x))",
+    "qa_id": 14
+  },
+  {
+    "group_id": 4,
+    "paragraph_ids": [
+      16
+    ],
+    "question": "Who contributed to the work on real toxicity prompts evaluation in 2020?",
+    "answer": "Gehman, S., S. Gururangan, M. Sap, Y. Choi, and N. A. Smith",
+    "evidence_excerpt": "Gehman, S., S. Gururangan, M. Sap, Y. Choi, and N. A. Smith. 2020. RealToxicityPrompts: Evaluating neural toxic degeneration in language models.",
+    "qa_id": 15
+  },
+  {
+    "group_id": 4,
+    "paragraph_ids": [
+      16
+    ],
+    "question": "What is the title of the paper that introduced the concept of chain-of-thought prompting in 2022?",
+    "answer": "Chain-of-thought prompting elicits reasoning in large language models",
+    "evidence_excerpt": "Wei, J., X. Wang, D. Schuurmans, M. Bosma, F. Xia, E. Chi, Q. V. Le, D. Zhou, et al. 2022. Chain-of-thought prompting elicits reasoning in large language models.",
+    "qa_id": 16
+  },
+  {
+    "group_id": 0,
+    "paragraph_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "question": "What are the two main problems addressed by additional training techniques for language models?",
+    "answer": "Two problems: insufficient helpfulness and potential harm.",
+    "evidence_excerpt": "To address these two problems, language models include two additional kinds of training for model alignment: methods designed to adjust LLMs to better align model alignment them to human needs for models to be helpful and non-harmful.",
+    "qa_id": 17
+  },
+  {
+    "group_id": 0,
+    "paragraph_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "question": "What does instruction tuning involve?",
+    "answer": "Finetuning on a corpus of instructions and responses.",
+    "evidence_excerpt": "It involves taking a base pretrained LLM and training it to follow instructions for a range of tasks, from machine translation to meal planning, by ﬁntuning it on a corpus of instructions and responses.",
+    "qa_id": 18
+  },
+  {
+    "group_id": 1,
+    "paragraph_ids": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "question": "What is the purpose of preference-based learning?",
+    "answer": "to improve the performance of fine-tuned LLMs",
+    "evidence_excerpt": "The goal of preference-based learning is to use preference judgments to further improve the performance of fine-tuned LLMs, in terms of general performance and also specifically with respect to qualities like honesty, helpfulness, and harmlessness.",
+    "qa_id": 19
+  },
+  {
+    "group_id": 2,
+    "paragraph_ids": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "question": "What are the aspects of system outputs that can be rated?",
+    "answer": "Helpfulness, honesty, correctness, complexity, and verbosity",
+    "evidence_excerpt": "In recent years, frequently used aspects have included models of helpfulness, honesty, correctness, complexity, and verbosity (Bai et al., 2022; Wang et al., 2024).",
+    "qa_id": 20
+  }
+]
