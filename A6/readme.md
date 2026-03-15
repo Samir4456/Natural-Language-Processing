@@ -191,6 +191,9 @@ The application allows users to:
 
 ---
 
+![Image](https://github.com/user-attachments/assets/8053bad0-f5b1-4bbc-8de8-6a8a3bdd9fd1)
+
+
 # Web App Features
 
 - Interactive question input
