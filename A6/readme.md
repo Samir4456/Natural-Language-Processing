@@ -23,33 +23,34 @@ The system retrieves relevant information from the chapter and generates answers
 
 ---
 
-# Project Structure
+## Project Structure
+
+```
 A6
 │
 ├── app
-│ ├── app.py # Dash web application
-│ └── utils.py # Retrieval and generation utilities
+│   ├── app.py                # Dash web application
+│   └── utils.py              # Retrieval and generation utilities
 │
 ├── data
-│ └── chapter_9.pdf # Source chapter
+│   └── chapter_9.pdf         # Source chapter
 │
 ├── outputs
-│ ├── task1
-│ │ ├── chapter_9_clean.txt
-│ │ ├── chapter_9_paragraphs.json
-│ │ ├── chapter_9_qa_pairs.json
-│ │ └── chapter_9_ground_truth_qa.json
-│ │
-│ └── task2
-│ ├── naive_rag_outputs.json
-│ ├── contextual_chunks.json
-│ ├── contextual_rag_outputs.json
-│ └── response-st125989-chapter-9.json
+│   ├── task1
+│   │   ├── chapter_9_clean.txt
+│   │   ├── chapter_9_paragraphs.json
+│   │   ├── chapter_9_qa_pairs.json
+│   │   └── chapter_9_ground_truth_qa.json
+│   │
+│   └── task2
+│       ├── naive_rag_outputs.json
+│       ├── contextual_chunks.json
+│       ├── contextual_rag_outputs.json
+│       └── response-st125989-chapter-9.json
 │
-├── a6.ipynb # Main notebook implementation
+├── a6.ipynb                  # Main notebook implementation
 └── README.md
-
----
+```
 
 # Task 1 — Dataset Preparation
 
