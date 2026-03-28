@@ -15,7 +15,7 @@ The system is deployed locally using **Docker (n8n)** and exposed to the interne
 
 ##  Report
 
-The full assignment report including all screenshots and verification evidence is available in **[A7.pdf](./A7.pdf)**.
+The full assignment report including all screenshots and verification is available in **[A7.pdf](./A7.pdf)**.
 
 The report covers:
 1. ngrok tunnel running with public Forwarding URL
