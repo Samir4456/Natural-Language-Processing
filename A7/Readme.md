@@ -13,6 +13,18 @@ The system is deployed locally using **Docker (n8n)** and exposed to the interne
 
 ---
 
+##  Report
+
+The full assignment report including all screenshots and verification evidence is available in **[A7.pdf](./A7.pdf)**.
+
+The report covers:
+1. ngrok tunnel running with public Forwarding URL
+2. MCP Server workflow (MCP Trigger + Calculator + Date & Time + Code Tool)
+3. AI Agent workflow with n8n chat verification (agent using MCP tools)
+4. Telegram Agent workflow setup
+5. Telegram conversation — creating the 4-phase project schedule
+6. Google Calendar showing all 4 events created successfully
+--- 
 
 ##  Tools & Technologies
 
