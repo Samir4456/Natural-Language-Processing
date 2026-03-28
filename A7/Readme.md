@@ -13,6 +13,7 @@ The system is deployed locally using **Docker (n8n)** and exposed to the interne
 
 ---
 
+
 ##  Tools & Technologies
 
 | Tool | Purpose |
@@ -111,17 +112,7 @@ All 4 events were successfully created in Google Calendar via a single Telegram 
 - **Webhook URL:** Must use ngrok HTTPS URL (not localhost) for Telegram webhooks to work
 - **Google OAuth:** Created via Google Cloud Console with ngrok callback URL
 
----
 
-##  Screenshots
-
-See the `/screenshots` folder (or report PDF) for:
-1. ngrok tunnel running
-2. MCP Server workflow
-3. AI Agent workflow with n8n chat verification
-4. Telegram Agent workflow
-5. Telegram conversation — project schedule command
-6. Google Calendar showing all 4 events
 
 ---
 
